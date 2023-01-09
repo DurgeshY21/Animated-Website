@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <nav>
+                <div class="logo">
+                    <img src="images/logo.png" alt="">
+                </div>
+                <div class="nav-link">
+                    <ul>
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">About</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="menu-icon">
+                    <img src="images/menu.png" alt="">
+                </div>
+            </nav>
+        </div>
+        <div class="content">
+            <div class="social-icons">
+                <img src="images/instagram.png" alt="">
+                <img src="images/facebook.png" alt="">
+                <img src="images/twitter.png" alt="">
+                <img src="images/youtube.png" alt="">
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="search">
+                <img src="images/search.png" alt="">
+            </div>
+        </div>
+        <img src="images/cloud.png" id="cloud" alt="">
+        <img src="images/plane.png" id="aeroplane" alt="">
+        
+        <div id="balloon">
+        <img src="images/balloon.png" class="balloon1" alt="">
+        <img src="images/balloon.png"  class="balloon2"alt="">
+       <img src="images/balloon.png"  class="balloon3" alt="">
+       </div>
+       <img src="images/pause.png" id="myImg" alt="">
+    </div>
+
+    <script>
+        var myImg=document.getElementById("myImg");
+        myImg.onclick=function(){
+            if(cloud.style.webkitAnimationPlayState=="paused"){
+                cloud.style.webkitAnimationPlayState="running";
+                aeroplane.style.webkitAnimationPlayState="running";
+                balloon.style.webkitAnimationPlayState="running";
+                myImg.src='images/paused.png';
+            }
+            else{
+            cloud.style.webkitAnimationPlayState="paused";
+                aeroplane.style.webkitAnimationPlayState="paused";
+                balloon.style.webkitAnimationPlayState="paused";
+                myImg.src='images/play.png';
+            }
+        }
+    </script>
+</body>
+</html>
